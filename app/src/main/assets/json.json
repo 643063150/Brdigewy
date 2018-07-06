@@ -1,0 +1,61 @@
+﻿{
+  "state": "100",
+  "msg": "查询成功！",
+  "rows": [
+    {
+      "id": "ZG",
+      "text": "中国",
+      "children": [
+        {
+          "id": "110000",
+          "text": "桥面系",
+          "children": [
+            {
+              "id": "bjs",
+              "text": "桥面系",
+              "children": [
+                {
+                  "id": "110101",
+                  "text": "伸缩缝",
+                  "children": [],
+                  "key": "402881705d7cf7b1015d7dad9f9504da",
+                  "parent_id": "bjs"
+                }
+              ],
+              "key": "402881705d7cf7b1015d7dafb0820ccd",
+              "parent_id": "110000"
+            }
+          ],
+          "key": "402881705d7cf7b1015d7dae73450b60",
+          "parent_id": "ZG"
+        },
+        {
+          "id": "120000",
+          "text": "上部结构",
+          "children": [
+            {
+              "id": "tjs",
+              "text": "主梁",
+              "children": [
+                {
+                  "id": "120101",
+                  "text": "T梁",
+                  "children": [],
+                  "key": "402881705d7cf7b1015d7dada00e04ec",
+                  "parent_id": "tjs"
+                }
+              ],
+              "key": "402881705d7cf7b1015d7db4aa930cce",
+              "parent_id": "120000"
+            }
+       
+          ],
+          "key": "402881705d7cf7b1015d7dae73a80b7a",
+          "parent_id": "ZG"
+        }
+      ],
+      "key": "402881ea5d7d1294015d7db22ce50019",
+      "parent_id": ""
+    }
+  ]
+}

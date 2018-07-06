@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:stepper="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5"
+            android:gravity="center"
+            android:padding="5dp"
+            android:src="@mipmap/back" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/numberlay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/numbertxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="构件编号"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/comorder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/comtypetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="构件类型"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/damagelay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/damagetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="病害类型"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:text="病害描述"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="照片"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/selectcom"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:src="@mipmap/goujian_w"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/takephoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@mipmap/takephoto"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/submit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:src="@mipmap/submit"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7.5"
+            android:orientation="vertical">
+
+            <q.rorbin.verticaltablayout.VerticalTabLayout
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#EDEDED"
+                android:visibility="visible"
+                app:indicator_color="@color/yelloli"
+                app:indicator_gravity="fill" >
+
+                <ListView
+                    android:id="@+id/plantlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></ListView>
+            </q.rorbin.verticaltablayout.VerticalTabLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_gray"></View>
+
+        <LinearLayout
+            android:id="@+id/plantfragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!--病害位置-->
+                        <LinearLayout
+                            android:id="@+id/damageposlay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <!--构件编号-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="构件编号" />
+
+                                <EditText
+                                    android:id="@+id/goujiannum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--构件名称-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="构件名称" />
+
+                                <EditText
+                                    android:id="@+id/goujianname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--方位参数-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="方位参数" />
+
+                                <Button
+                                    android:id="@+id/fangweinum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:drawableRight="@mipmap/arrow_down"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--位置参数1-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/posnum1"
+                                    android:layout_width="70dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:text="位置参数1"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/posnum1ed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/unit1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <!--位置参数2-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/posnum2"
+                                    android:layout_width="70dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:text="位置参数2"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/posnum2ed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/unit2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <!--位置参数3-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/posnum3"
+                                    android:layout_width="70dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:text="位置参数3"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/posnum3ed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/unit3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--病害属性-->
+                        <LinearLayout
+                            android:id="@+id/damageproperty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <!--病害类型-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="病害类型:"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/planttype"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:text="选择病害类型"
+                                    android:textAllCaps="false"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--长-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+
+                                    android:id="@+id/changtxt"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="长:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/chang"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:textSize="11sp"
+
+                                    />
+                            </LinearLayout>
+
+                            <!--宽-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/kuantxt"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="宽:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/kuan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--深-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/shentxt"
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="深:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/gao"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:focusable="false"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--病害数量-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="数量:"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/stepperCustom"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                 />
+                            </LinearLayout>
+
+                            <!--病害标度-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="70dp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="病害标度:"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/damagepost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--已存在病害最大标度-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/maxsacl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!--照片信息-->
+                        <LinearLayout
+                            android:id="@+id/photolay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/qrcode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:text="扫一扫"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/audio"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:text="音频"
+                                    android:textSize="11sp" />
+
+                                <Button
+                                    android:id="@+id/video"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/brdige_ed_bg"
+                                    android:gravity="center"
+                                    android:paddingLeft="10dp"
+                                    android:text="视频"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                            <!--备注-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="备注:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/remarks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:focusable="false"
+                                    android:singleLine="true"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--编号1-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="编号1:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/photonum1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:focusable="false"
+                                    android:singleLine="true"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--编号2-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="编号2:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/photonum2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:focusable="false"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--编号3-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="35dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="编号3:"
+                                    android:textSize="11sp" />
+
+                                <EditText
+                                    android:id="@+id/photonum3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/ed_bg_all"
+                                    android:focusable="false"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+
+                            <!--照片-->
+                            <com.bigkoo.convenientbanner.ConvenientBanner xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/convenientBanner"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="10dp"
+                                app:canLoop="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

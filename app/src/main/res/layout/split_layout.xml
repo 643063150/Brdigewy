@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <ListView
+                android:id="@+id/splitlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="35dp"
+                android:layout_weight="1"></ListView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="10dp"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center">
+
+                    <CheckBox
+                        android:id="@+id/allcheck"
+                        android:text="全选"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/checkbox"
+                        android:checked="false"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/alldelect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:text="删除" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/split_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50.5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="形式:" />
+
+                <Button
+                    android:id="@+id/comtype"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:background="@drawable/brdige_ed_bg"
+                    android:drawableRight="@mipmap/arrow_down"
+                    android:focusable="false"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="模板:" />
+
+                <Button
+                    android:id="@+id/mould"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:background="@drawable/brdige_ed_bg"
+                    android:drawableRight="@mipmap/arrow_down"
+                    android:focusable="false"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dark_gray"></View>
+
+            <TextView
+                android:id="@+id/mouldtxt"
+                android:layout_width="match_parent"
+                android:layout_height="50.5dp"
+                android:paddingBottom="8dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:text="方式:" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dark_gray"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/num1lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.5dp"
+                        android:background="@drawable/bg_split_txt"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/num1txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参数1:" />
+
+                        <LinearLayout
+                            android:id="@+id/numed1lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/num11"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="~"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/num12"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:background="@color/dark_gray"></View>-->
+
+                    <LinearLayout
+                        android:id="@+id/num2lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:background="@drawable/bg_split_txt"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/num2txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参数2:" />
+
+                        <LinearLayout
+                            android:id="@+id/numed2lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/num21"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="~"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/num22"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:background="@color/dark_gray"></View>-->
+
+                    <LinearLayout
+                        android:id="@+id/num3lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:background="@drawable/bg_split_txt"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/num3txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参数3:" />
+
+                        <LinearLayout
+                            android:id="@+id/numed3lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/num31"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="~"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/num32"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0.5dp"-->
+                        <!--android:background="@color/dark_gray"></View>-->
+
+                    <LinearLayout
+                        android:id="@+id/num4lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="50.5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:background="@drawable/bg_split_txt"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/num4txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="参数4:" />
+
+                        <LinearLayout
+                            android:id="@+id/numed4lay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/num41"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="~"
+                                android:textSize="20dp" />
+
+                            <Button
+                                android:id="@+id/num42"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/brdige_ed_bg"
+                                android:digits="1234567890"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_gray"></View>
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/brdige_ed_bg"
+                    android:text="生成编号" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/dark_gray"></View>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

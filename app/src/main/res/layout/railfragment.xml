@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--基本信息-->
+            <include
+                layout="@layout/basiclay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+            <!--病害位置-->
+            <LinearLayout
+                android:id="@+id/plantpos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="联-跨:      "
+                        android:textSize="11sp" />
+
+                    <Button
+                        android:id="@+id/dunhao"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="左侧/右侧:"
+                        android:textSize="11sp" />
+
+                    <Button
+                        android:id="@+id/cemian"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/agobtn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:text="距前"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/juago"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:drawableRight="@mipmap/cm"
+                        android:background="@drawable/ed_bg_all"
+                        android:paddingLeft="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <include
+                layout="@layout/addphotolay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+        </LinearLayout>
+        <com.example.numketboard.widget.VirtualKeyboardView
+            android:id="@+id/virtualKeyboardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="6"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

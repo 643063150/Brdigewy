@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stepper="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/textAmount3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--基本信息-->
+                <include
+                    layout="@layout/basiclay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+                <!--病害位置-->
+                <LinearLayout
+                    android:id="@+id/plantpos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="墩台号:      "
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/goujiannum"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/leftlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/leftbtn"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:text="距左"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/juleft"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ed_bg_all"
+                            android:drawableRight="@mipmap/cm"
+                            android:paddingLeft="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/uplay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/upbtn"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:text="距上"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/juup"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:background="@drawable/ed_bg_all"
+                            android:paddingLeft="10dp"
+                            android:drawableRight="@mipmap/cm"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--其他信息-->
+                <LinearLayout
+                    android:id="@+id/qitalay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="严重程度:"
+                            android:visibility="gone" />
+
+                        <RadioGroup
+                            android:id="@+id/plant"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <RadioButton
+                                android:id="@+id/qing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:text="轻度" />
+
+                            <RadioButton
+                                android:id="@+id/zhong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="中度" />
+
+                            <RadioButton
+                                android:id="@+id/very"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="重度" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:orientation="horizontal">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="10dp"-->
+                    <!--android:text="评定标准:" />-->
+
+                    <!--<com.bigkoo.snappingstepper.SnappingStepper-->
+                    <!--android:id="@+id/stepperCustom2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--stepper:max="5"-->
+                    <!--stepper:min="1"-->
+                    <!--stepper:step="1"-->
+                    <!--stepper:stepper_background="@drawable/brdige_ed_bg"-->
+                    <!--stepper:stepper_contentBackground="@color/white"-->
+                    <!--stepper:stepper_contentTextSize="18"-->
+                    <!--stepper:stepper_leftButtonBackground="@drawable/bt_left"-->
+                    <!--stepper:stepper_rightButtonBackground="@drawable/bg_right"-->
+                    <!--stepper:value="1" />-->
+                    <!--</LinearLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="病害描述:" />
+
+                        <EditText
+                            android:id="@+id/miaoshu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:padding="10dp" />
+
+                        <Button
+                            android:id="@+id/adddes"
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:text="+" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <include
+                    layout="@layout/addphotolay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.example.numketboard.widget.VirtualKeyboardView
+            android:id="@+id/virtualKeyboardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="6"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:stepper="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--基本信息-->
+            <LinearLayout
+                android:id="@id/jibenlay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:text="病害类型:" />
+
+                    <Button
+                        android:id="@+id/planttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:text="选择病害类型" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:id="@+id/changtxt"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:padding="10dp"
+                        android:text="长:" />
+
+                    <EditText
+                        android:id="@+id/chang"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ed_bg_all"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/kuantxt"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:padding="10dp"
+                        android:text="宽:" />
+
+                    <EditText
+                        android:id="@+id/kuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ed_bg_all"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/shentxt"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:text="深:" />
+
+                    <EditText
+                        android:id="@+id/gao"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/ed_bg_all"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:text="数量:" />
+
+                    <com.bigkoo.snappingstepper.SnappingStepper
+                        android:id="@+id/stepperCustom"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        stepper:max="10"
+                        stepper:min="1"
+                        stepper:step="1"
+                        stepper:stepper_background="@drawable/brdige_ed_bg"
+                        stepper:stepper_contentBackground="@color/white"
+                        stepper:stepper_contentTextSize="11"
+                        stepper:stepper_leftButtonBackground="@drawable/bt_left"
+                        stepper:stepper_rightButtonBackground="@drawable/bg_right"
+                        stepper:value="1" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textSize="11sp"
+                        android:text="评定标度:" />
+
+                    <com.bigkoo.snappingstepper.SnappingStepper
+                        android:id="@+id/stepperCustom2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        stepper:max="5"
+                        stepper:min="1"
+                        stepper:step="1"
+                        stepper:stepper_background="@drawable/brdige_ed_bg"
+                        stepper:stepper_contentBackground="@color/white"
+                        stepper:stepper_contentTextSize="11"
+                        stepper:stepper_leftButtonBackground="@drawable/bt_left"
+                        stepper:stepper_rightButtonBackground="@drawable/bg_right"
+                        stepper:value="1" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--病害位置-->
+            <LinearLayout
+                android:id="@id/plantpos"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="桥墩编号:"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/jiaodu"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textSize="11sp"
+                        android:gravity="center"
+                        android:background="@drawable/ed_bg_all"
+                        android:paddingLeft="10dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="墩柱编号: "
+                        android:textSize="11sp" />
+                    <Button
+                        android:id="@+id/goujiannum"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cemiantext"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="侧面方位:      "
+                        android:textSize="11sp" />
+
+                    <Button
+                        android:id="@+id/cemian"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/upbtn"
+                        android:layout_width="70dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/brdige_ed_bg"
+                        android:drawableRight="@mipmap/arrow_down"
+                        android:text="距上"
+                        android:textSize="11sp" />
+
+                    <EditText
+                        android:id="@+id/juup"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center"
+                        android:drawableRight="@mipmap/cm"
+                        android:background="@drawable/ed_bg_all"
+                        android:paddingLeft="10dp"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--其他信息-->
+            <LinearLayout
+                android:id="@+id/qitalay"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+            </LinearLayout>
+
+            <include
+                layout="@layout/addphotolay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+        </LinearLayout>
+    </ScrollView>
+    <com.example.numketboard.widget.VirtualKeyboardView
+        android:id="@+id/virtualKeyboardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="6"
+        android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

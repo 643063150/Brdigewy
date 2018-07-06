@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_up"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/projects"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@mipmap/arrow_down"
+                    android:text="选择项目" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="检查新版本"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/projectupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/update_button"
+                    android:text="更新" />
+
+                <com.zpp.numberprogressbar.numberprogressbar.NumberProgressBar
+                    android:id="@+id/progressView_project"
+                    style="@style/NumberProgressBar_Grace_Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/projectupdate"
+                    android:layout_toRightOf="@id/projects"
+                    android:visibility="gone" />
+
+                <com.brdigewy.brdigesystem.MyViews.LoopProgressBar
+                    android:id="@+id/looProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/projectupdate"
+                    android:layout_toRightOf="@id/projects"
+                    android:visibility="gone"
+                    app:lineColor="@color/yellow"
+                    app:space="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_up"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="构件拆分" />
+
+                <TextView
+                    android:id="@+id/com_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="检查新版本" />
+
+                <Button
+                    android:id="@+id/comupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/update_button"
+                    android:text="更新" />
+
+                <com.zpp.numberprogressbar.numberprogressbar.NumberProgressBar
+                    android:id="@+id/progressView_com"
+                    style="@style/NumberProgressBar_Grace_Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/comupdate"
+                    android:layout_toRightOf="@id/com"
+                    android:visibility="gone" />
+
+                <com.brdigewy.brdigesystem.MyViews.LoopProgressBar
+                    android:id="@+id/looProgress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/comupdate"
+                    android:layout_toRightOf="@id/com"
+                    android:visibility="gone"
+                    app:lineColor="@color/yellow"
+                    app:space="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_up"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/mould"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="构件模板" />
+
+                <TextView
+                    android:id="@+id/mould_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="检查新版本" />
+
+                <Button
+                    android:id="@+id/mouldupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/update_button"
+                    android:text="更新" />
+
+                <com.zpp.numberprogressbar.numberprogressbar.NumberProgressBar
+                    android:id="@+id/progressView_mould"
+                    style="@style/NumberProgressBar_Grace_Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/mouldupdate"
+                    android:layout_toRightOf="@id/mould"
+                    android:visibility="gone" />
+
+                <com.brdigewy.brdigesystem.MyViews.LoopProgressBar
+                    android:id="@+id/looProgress4"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/mouldupdate"
+                    android:layout_toRightOf="@id/mould"
+                    android:visibility="gone"
+                    app:lineColor="@color/yellow"
+                    app:space="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_up"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/damage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="病害挂接" />
+
+                <TextView
+                    android:id="@+id/damage_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="检查新版本" />
+
+                <Button
+                    android:id="@+id/damageupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/update_button"
+                    android:text="更新" />
+
+                <com.zpp.numberprogressbar.numberprogressbar.NumberProgressBar
+                    android:id="@+id/progressView_damage"
+                    style="@style/NumberProgressBar_Grace_Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/damageupdate"
+                    android:layout_toRightOf="@id/damage"
+                    android:visibility="gone" />
+
+                <com.brdigewy.brdigesystem.MyViews.LoopProgressBar
+                    android:id="@+id/looProgress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/damageupdate"
+                    android:layout_toRightOf="@id/damage"
+                    android:visibility="gone"
+                    app:lineColor="@color/yellow"
+                    app:space="5dp" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_up"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="基础信息" />
+
+                <TextView
+                    android:id="@+id/product_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="检查新版本" />
+
+                <Button
+                    android:id="@+id/productupdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/update_button"
+                    android:text="更新" />
+
+                <com.zpp.numberprogressbar.numberprogressbar.NumberProgressBar
+                    android:id="@+id/progressView_product"
+                    style="@style/NumberProgressBar_Grace_Yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/productupdate"
+                    android:layout_toRightOf="@id/product"
+                    android:visibility="gone" />
+
+                <com.brdigewy.brdigesystem.MyViews.LoopProgressBar
+                    android:id="@+id/looProgress3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/productupdate"
+                    android:layout_toRightOf="@id/product"
+                    android:visibility="gone"
+                    app:lineColor="@color/yellow"
+                    app:space="5dp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

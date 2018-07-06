@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--基本信息-->
+                <LinearLayout
+                    android:id="@+id/jibenlay"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="设计扭矩(N.m):"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/void_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ed_bg_all"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="95dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="松动扭矩(N.m):"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/devition_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ed_bg_all"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--病害位置-->
+                <LinearLayout
+                    android:id="@+id/plantpos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="构件编号:      "
+                            android:textSize="11sp" />
+                        <Button
+                            android:id="@+id/goujiannum"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--其他信息-->
+                <LinearLayout
+                    android:id="@+id/qitalay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"></LinearLayout>
+
+                <include
+                    layout="@layout/addphotolay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.example.numketboard.widget.VirtualKeyboardView
+            android:id="@+id/virtualKeyboardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="6"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

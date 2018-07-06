@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brdigewy.brdigesystem">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tools:ignore="ProtectedPermissions" />
+    <application
+        android:name=".MyAppliaction.MyAppliaction"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Activity.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.brdigewy.brdigesystem.MyAppliaction.MyGlide"
+            android:value="GlideModule"></meta-data>
+
+        <activity
+            android:name=".Activity.MainActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.EditMang"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.CheckUser"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.SetBrdige"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddBrfige"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.TaskEdit"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddPlant"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Activity.PhotoLook"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.EditPhoto"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.UpLoad"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.CodeActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name="io.github.xudaojie.qrcodelib.CaptureActivity" />
+        <activity
+            android:name=".Activity.BrdigeInfo"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.DataManage"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddDamage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.Upload2"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddSection"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddLines"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.AddLine"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="com.afollestad.materialcamera.CaptureActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/MaterialCamera.CaptureActivity" />
+        <activity
+            android:name="com.afollestad.materialcamera.CaptureActivity2"
+            android:screenOrientation="landscape"
+            android:theme="@style/MaterialCamera.CaptureActivity" />
+        <activity
+            android:name=".Activity.VideoPlay"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.UpDate"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.LookDamage"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.DamageIfno2"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.DamageListActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.SplitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.SpecialDetection"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".Activity.SpecialActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"></activity>
+        <!--<activity-->
+            <!--android:name=".Activity.offlinePhoto"-->
+            <!--android:configChanges="orientation|keyboardHidden|screenSize"-->
+            <!--android:screenOrientation="landscape"></activity>-->
+
+        <receiver
+            android:name=".MyAppliaction.ScreenActionReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <service android:name=".MyAppliaction.MyService">
+            <intent-filter>
+                <action android:name="cn.waiye.service" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyAppliaction.UpDateService">
+            <intent-filter>
+                <action android:name="cn.waiye.updateservice"></action>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

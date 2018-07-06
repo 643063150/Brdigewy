@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/graffit_contrller"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:id="@+id/quxiao"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="取消" />
+
+            <TextView
+                android:id="@+id/undo"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="撤销" />
+
+            <TextView
+                android:id="@+id/redo"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_bg"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="恢复" />
+
+            <TextView
+                android:id="@+id/clear"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:background="@drawable/btn_bg"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="清除" />
+
+            <TextView
+                android:id="@+id/round"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_bg"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="线条" />
+
+            <TextView
+                android:id="@+id/color_selector"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:padding="10dp"
+                android:background="@drawable/btn_bg"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="颜色" />
+
+            <TextView
+                android:id="@+id/save"
+                android:background="@drawable/btn_bg"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="确定" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/graffit_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/graffit_contrller" />
+        <LinearLayout
+            android:id="@+id/clolorlay"
+            android:visibility="gone"
+            android:layout_above="@id/graffit_contrller"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_select_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/red" />
+
+            <ImageView
+                android:id="@+id/blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/blue" />
+
+            <ImageView
+                android:id="@+id/yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/yellow" />
+
+            <ImageView
+                android:id="@+id/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/black" />
+
+            <ImageView
+                android:id="@+id/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/green" />
+
+            <ImageView
+                android:id="@+id/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/strocklay"
+            android:layout_above="@id/graffit_contrller"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/color_select_bg"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:id="@+id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                />
+
+            <LinearLayout
+                android:id="@+id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/foure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

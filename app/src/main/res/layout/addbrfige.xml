@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+    <TextView
+        android:text="结构名称:"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/brdigenameed"
+        android:background="@drawable/rounded_editview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="结构类型:"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/brdigetype"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_editview"
+        android:drawableRight="@mipmap/arrow_down"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <TextView
+        android:text="路线名称:"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cheeckadd"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_editview"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/arrow_down"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/addline"
+            android:text="路线管理"
+            android:background="@drawable/rounded_editview"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+    <TextView
+        android:text="路段名称:"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/cheecksection"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_editview"
+            android:gravity="center_vertical"
+            android:drawableRight="@mipmap/arrow_down"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/addsection"
+            android:text="路段管理"
+            android:background="@drawable/rounded_editview"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/sumbit"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@mipmap/arrow_down"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</LinearLayout>

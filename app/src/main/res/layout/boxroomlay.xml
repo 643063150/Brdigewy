@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stepper="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/textAmount3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--基本信息-->
+                <include
+                    layout="@layout/basiclay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+                <!--病害位置-->
+                <LinearLayout
+                    android:id="@+id/plantpos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/lianlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="联-跨:      "
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/liankua"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/boxlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="箱室:      "
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/boxroom"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="侧面方位:      "
+                            android:textSize="11sp" />
+
+                        <Button
+                            android:id="@+id/cemian"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/goujiantext"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="细分方位:      "
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/goujiannum"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ed_bg_all"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/agobtn"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:text="距前"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/juago"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/ed_bg_all"
+                            android:drawableRight="@mipmap/cm"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/leftbtn"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:text="距左"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/juleft"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableRight="@mipmap/cm"
+                            android:background="@drawable/ed_bg_all"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/upbtn"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/brdige_ed_bg"
+                            android:drawableRight="@mipmap/arrow_down"
+                            android:text="距上"
+                            android:textSize="11sp" />
+
+                        <EditText
+                            android:id="@+id/juup"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:drawableRight="@mipmap/cm"
+                            android:background="@drawable/ed_bg_all"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--其他信息-->
+                <LinearLayout
+                    android:id="@+id/qitalay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"></LinearLayout>
+
+                <include
+                    layout="@layout/addphotolay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></include>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.example.numketboard.widget.VirtualKeyboardView
+            android:id="@+id/virtualKeyboardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="6"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

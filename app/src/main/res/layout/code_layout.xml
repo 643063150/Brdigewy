@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="杭州湾跨海大桥是一座横跨中国杭州湾的跨海大桥,该桥北起浙江省嘉兴市海盐郑家埭，南至宁波市慈溪水路湾。于2003年11月开工，2007年06月贯通，2008年05月01日通车。是成千上万设计、工程学家和施工人员齐心协力、精诚合作的壮丽奇观。"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/code" />
+
+            <TextView
+                android:id="@+id/brdige"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="本次检查部位：第3联第2跨桥面铺装，桥宽：33米，双向六车道。材质：普通沥青路面"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

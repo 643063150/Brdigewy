@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:id="@+id/layout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="225dp"
+        android:layout_marginRight="225dp"
+        android:background="@drawable/pop_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="选择操作"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/close"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:padding="15dp"
+                android:text="关闭"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"></View>
+
+        <com.brdigewy.brdigesystem.MyViews.MyListView
+            android:id="@+id/poplist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.brdigewy.brdigesystem.MyViews.MyListView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_gray"></View>
+
+        <com.example.voicemanage.voice.WechatVoiceButton
+            android:id="@+id/button_rec1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_selector"
+            android:text="录音"
+            android:textColor="#ffffff"
+            android:padding="8dp"/>
+    </LinearLayout>
+</LinearLayout>
